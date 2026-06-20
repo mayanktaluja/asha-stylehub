@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://asha-stylehub.vercel.app/sitemap.xml

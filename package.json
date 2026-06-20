@@ -1,0 +1,10 @@
+{
+  "name": "asha-stylehub",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Public static landing page for Asha - A Style Hub Area.",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/check-static.mjs"
+  }
+}
