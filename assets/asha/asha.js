@@ -61,12 +61,14 @@ function setupStickyCta() {
   if (!sticky || !hero) return;
 
   const update = () => {
-    const heroBottom = hero.getBoundingClientRect().bottom;
+    const heroThreshold = Math.min(hero.offsetHeight * 0.72, 620);
     const contactTop = contact ? contact.getBoundingClientRect().top : Number.POSITIVE_INFINITY;
-    const showSticky = heroBottom < 0 && contactTop > window.innerHeight * 0.82;
+    const pastHero = window.scrollY > heroThreshold;
+    const beforeContact = contactTop > window.innerHeight - 96;
+    const showSticky = pastHero && beforeContact;
 
     sticky.classList.toggle("is-visible", showSticky);
-    sticky.classList.toggle("is-muted", heroBottom >= 0 || contactTop <= window.innerHeight * 0.82);
+    sticky.classList.toggle("is-muted", !showSticky);
     sticky.setAttribute("aria-hidden", String(!showSticky));
   };
 
