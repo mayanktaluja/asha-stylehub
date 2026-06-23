@@ -34,6 +34,54 @@
   "sameAs": ["https://www.instagram.com/asha.stylehub/"]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need an appointment, or can I walk in?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Message us on WhatsApp for the day's timing, then walk in. A quick message means we are ready when you arrive." }
+    },
+    {
+      "@type": "Question",
+      "name": "How are measurements taken?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In person at the store, so the fit is right for you. Bring a garment that already fits you well as a reference if you can." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I bring for custom stitching?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your fabric or a design photo, plus a reference garment if you have one. We guide you on the rest in store." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you stitch from fabric I already have?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Bring your own fabric, or choose from the range available in store." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you alter garments bought elsewhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — bring the garment and we adjust the fit and finish it cleanly." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long will my order take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on the garment and the season. We confirm an exact ready-date when you drop your fabric at the store." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cost depends on the garment, fabric, and work involved. Message us on WhatsApp or ask in store and we share a clear quote." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are you, and how do I reach the store?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana. Tap Open in Google Maps for directions." }
+    }
+  ]
+}
+</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   :root {
@@ -437,6 +485,49 @@
     background: rgba(255, 253, 248, .10);
     border-color: rgba(255, 253, 248, .20);
   }
+  .faq-list {
+    display: grid;
+    gap: 10px;
+  }
+  .faq-item {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 253, 248, .86);
+    box-shadow: var(--shadow);
+  }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 52px;
+    padding: 14px 16px;
+    color: var(--wine);
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1.25;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    flex: 0 0 auto;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--gold);
+  }
+  .faq-item[open] summary::after { content: "\2212"; }
+  .faq-item summary:focus-visible {
+    outline: 3px solid rgba(184, 138, 69, .62);
+    outline-offset: -3px;
+  }
+  .faq-answer {
+    padding: 0 16px 16px;
+    color: var(--muted);
+    font-size: 14px;
+  }
   .footer {
     padding: 26px 0 0;
     color: var(--muted);
@@ -724,6 +815,48 @@
           <div class="process-step"><div class="step-number">2</div><strong>Visit for measurements</strong><span>Bring fabric, reference photo, or garment for fitting discussion.</span></div>
           <div class="process-step"><div class="step-number">3</div><strong>Trial or alteration</strong><span>The store guides the next fitting step when adjustment is needed.</span></div>
           <div class="process-step"><div class="step-number">4</div><strong>Pickup from Jyoti Park</strong><span>Collect from Asha near Aashirwad Marriage Lawn, Sector 7 Ext.</span></div>
+        </div>
+      </section>
+
+      <section class="section faq" aria-labelledby="faq-title">
+        <div class="section-head">
+          <span class="kicker">Good to know</span>
+          <h2 id="faq-title">Questions before you visit</h2>
+          <p class="section-note">Quick answers to what customers ask most. Anything else, message us on WhatsApp.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Do I need an appointment, or can I walk in?</summary>
+            <div class="faq-answer">Message us on WhatsApp for the day&apos;s timing, then walk in. A quick message means we are ready when you arrive.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How are measurements taken?</summary>
+            <div class="faq-answer">In person at the store, so the fit is right for you. Bring a garment that already fits you well as a reference if you can.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What should I bring for custom stitching?</summary>
+            <div class="faq-answer">Your fabric or a design photo, plus a reference garment if you have one. We guide you on the rest in store.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Can you stitch from fabric I already have?</summary>
+            <div class="faq-answer">Yes. Bring your own fabric, or choose from the range available in store.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you alter garments bought elsewhere?</summary>
+            <div class="faq-answer">Yes — bring the garment and we adjust the fit and finish it cleanly.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How long will my order take?</summary>
+            <div class="faq-answer">It depends on the garment and the season. We confirm an exact ready-date when you drop your fabric at the store.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How much does it cost?</summary>
+            <div class="faq-answer">Cost depends on the garment, fabric, and work involved. Message us on WhatsApp or ask in store and we share a clear quote.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Where are you, and how do I reach the store?</summary>
+            <div class="faq-answer">Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana. Tap &ldquo;Open in Google Maps&rdquo; below for directions.</div>
+          </details>
         </div>
       </section>
 

@@ -31,6 +31,18 @@ assert.equal(schema.alternateName, "Asha Boutique and Collections");
 assert.equal(schema.address.addressLocality, "Gurugram");
 assert.deepEqual(schema.sameAs, ["https://www.instagram.com/asha.stylehub/"]);
 
+// ── FAQ: every JSON-LD block parses, and an FAQPage backs the visible FAQ ────
+const ldBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(
+  (m) => JSON.parse(m[1])
+);
+const faq = ldBlocks.find((b) => b["@type"] === "FAQPage");
+assert.ok(faq, "index.html should include FAQPage JSON-LD");
+assert.ok(
+  Array.isArray(faq.mainEntity) && faq.mainEntity.length >= 6,
+  "FAQPage should list the visitor questions"
+);
+assert.match(html, /<details class="faq-item">/, "FAQ should render as no-JS details items");
+
 // ── Self-contained page: no external CSS/JS bundle, only local images ────────
 assert.doesNotMatch(html, /\/assets\/asha\//, "landing should be self-contained (no legacy asha.css/asha.js)");
 const imageRefs = [...new Set(html.match(/\/assets\/launch-assets\/[^"'\s,)]+/g) || [])];
