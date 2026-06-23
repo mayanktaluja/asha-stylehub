@@ -2,7 +2,7 @@
   "cleanUrls": true,
   "headers": [
     {
-      "source": "/assets/asha/(.*)",
+      "source": "/assets/launch-assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",

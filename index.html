@@ -1,191 +1,815 @@
-<!DOCTYPE html>
-<html lang="en-IN">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asha - A Style Hub Area | Custom Stitching & Fitting in Gurugram</title>
-  <meta name="description" content="Asha - A Style Hub Area, formerly Asha Boutique & Collections, serves Gurugram with women's custom stitching, blouse and saree fitting, alterations, bridal/occasion support, and ready-made ethnic wear.">
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://asha-stylehub.vercel.app/">
-
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Asha - A Style Hub Area">
-  <meta property="og:title" content="Asha - A Style Hub Area">
-  <meta property="og:description" content="Custom stitching, blouse and saree fitting, alterations, bridal/occasion support, and ready-made ethnic wear in Gurugram since 1996.">
-  <meta property="og:url" content="https://asha-stylehub.vercel.app/">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Asha - A Style Hub Area">
-  <meta name="twitter:description" content="Women's custom stitching and fitting in Jyoti Park, Sector 7 Ext., Gurugram. WhatsApp before visiting.">
-  <meta name="theme-color" content="#fff3df">
-
-  <link rel="stylesheet" href="/assets/asha/asha.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["ClothingStore", "LocalBusiness"],
-    "name": "Asha Boutique & Collections | Best Boutique in Gurgaon | Ethinic Wear Shop | Latkan, Button & Laces Store",
-    "alternateName": "Asha - A Style Hub Area",
-    "description": "Women's custom stitching, blouse and saree fitting, alterations, bridal and occasion support, and ready-made ethnic wear in Gurugram.",
-    "foundingDate": "1996",
-    "telephone": ["+919718213716", "+918118837701"],
-    "url": "https://asha-stylehub.vercel.app/",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Jyoti Park, Main Road, near Ashirwad Marriage Lawn, Sector 7 Ext.",
-      "addressLocality": "Gurugram",
-      "addressRegion": "Haryana",
-      "addressCountry": "IN"
-    },
-    "areaServed": {
-      "@type": "City",
-      "name": "Gurugram"
-    },
-    "sameAs": ["https://www.instagram.com/asha.stylehub/"]
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#6F1530">
+<title>Asha Style Hub | Women's Stitching &amp; Fitting in Gurugram</title>
+<meta name="description" content="Asha Style Hub, formerly known as Asha Boutique and Collections, has served Gurugram since 1996 with women's custom stitching, blouse fitting, suit stitching, bridal and occasion fitting, alterations, and ready-made ethnic wear available in store.">
+<meta property="og:title" content="Asha Style Hub">
+<meta property="og:description" content="Serving Gurugram since 1996 for women's custom stitching, fitting, alterations, and in-store ethnic wear.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_IN">
+<meta property="og:url" content="https://asha-stylehub.vercel.app/">
+<link rel="canonical" href="https://asha-stylehub.vercel.app/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "Asha Style Hub",
+  "alternateName": "Asha Boutique and Collections",
+  "url": "https://asha-stylehub.vercel.app/",
+  "telephone": "+919718213716",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext.",
+    "addressLocality": "Gurugram",
+    "addressRegion": "Haryana",
+    "addressCountry": "IN"
+  },
+  "areaServed": ["Jyoti Park", "Sector 7 Ext.", "Gurugram"],
+  "sameAs": ["https://www.instagram.com/asha.stylehub/"]
+}
+</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --ink: #22171A;
+    --muted: #715E63;
+    --paper: #FFF9F1;
+    --ivory: #FFFDF8;
+    --wine: #6F1530;
+    --wine-dark: #43101D;
+    --blush: #F5DCE0;
+    --gold: #B88A45;
+    --charcoal: #1B1718;
+    --line: rgba(111, 21, 48, .17);
+    --shadow: 0 20px 44px -30px rgba(38, 19, 23, .74);
   }
-  </script>
-  <script src="/assets/asha/asha.js" defer></script>
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    color: var(--ink);
+    background: linear-gradient(180deg, var(--paper), #FFFDF9 42%, #F7ECE7 100%);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 92px;
+  }
+  a { color: inherit; }
+  button, a { -webkit-tap-highlight-color: transparent; }
+  img { display: block; max-width: 100%; }
+  h1, h2, h3, p { margin: 0; }
+  .page {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    padding: 12px 14px 56px;
+  }
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 52px;
+  }
+  .brand-lockup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    color: #FFF9F1;
+    background: var(--wine);
+    border: 1px solid rgba(184, 138, 69, .55);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 27px;
+    font-weight: 700;
+  }
+  .brand-name {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.15;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .brand-sub {
+    color: var(--muted);
+    font-size: 12px;
+  }
+  .top-actions {
+    display: none;
+    gap: 10px;
+    align-items: center;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.15;
+    font-weight: 800;
+    text-align: center;
+    transition: transform .14s ease, box-shadow .14s ease, background-color .14s ease;
+  }
+  .btn:active, .chip:active { transform: scale(.98); }
+  .btn:focus-visible, .chip:focus-visible {
+    outline: 3px solid rgba(184, 138, 69, .62);
+    outline-offset: 3px;
+  }
+  .btn-primary {
+    color: #FFF9F1;
+    background: var(--wine);
+    box-shadow: 0 16px 28px -21px rgba(111, 21, 48, .92);
+  }
+  .btn-secondary {
+    color: var(--wine);
+    background: rgba(255, 253, 248, .90);
+    border-color: rgba(111, 21, 48, .20);
+  }
+  .hero {
+    position: relative;
+    min-height: min(680px, calc(100svh - 68px));
+    margin-top: 8px;
+    overflow: hidden;
+    border-radius: 26px;
+    background: var(--charcoal);
+    box-shadow: 0 26px 60px -36px rgba(38, 19, 23, .90);
+  }
+  .hero picture, .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .hero-img {
+    object-fit: cover;
+    object-position: 43% 34%;
+  }
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(27,23,24,.10) 0%, rgba(27,23,24,.18) 34%, rgba(27,23,24,.88) 100%),
+      linear-gradient(90deg, rgba(27,23,24,.22), rgba(27,23,24,0) 54%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    min-height: inherit;
+    display: grid;
+    align-content: end;
+    gap: 10px;
+    padding: 18px;
+    color: #FFF9F1;
+  }
+  .eyebrow {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 249, 241, .34);
+    border-radius: 999px;
+    background: rgba(27, 23, 24, .42);
+    color: #F7E1B8;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+  }
+  h1 {
+    max-width: 760px;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(36px, 12vw, 78px);
+    line-height: .96;
+    letter-spacing: 0;
+  }
+  .hero-lede {
+    max-width: 680px;
+    color: rgba(255, 249, 241, .88);
+    font-size: clamp(15px, 4.2vw, 21px);
+  }
+  .hero-lede strong { color: #FFFFFF; }
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 520px;
+  }
+  .hero-proof {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    max-width: 580px;
+  }
+  .proof-item {
+    min-height: 56px;
+    padding: 9px;
+    border: 1px solid rgba(255, 249, 241, .22);
+    border-radius: 14px;
+    background: rgba(255, 253, 248, .12);
+    backdrop-filter: blur(12px);
+  }
+  .proof-item strong {
+    display: block;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 1.12;
+  }
+  .proof-item span {
+    display: block;
+    margin-top: 3px;
+    color: rgba(255, 249, 241, .72);
+    font-size: 11px;
+    line-height: 1.18;
+  }
+  .section {
+    padding: 28px 0 0;
+  }
+  .section-head {
+    display: grid;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  h2 {
+    color: var(--wine-dark);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(27px, 7vw, 46px);
+    line-height: 1.06;
+  }
+  .section-note {
+    max-width: 680px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .story-grid, .deal-grid, .process-grid {
+    display: grid;
+    gap: 12px;
+  }
+  .story-card, .deal-card, .process-step {
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    overflow: hidden;
+    background: rgba(255, 253, 248, .86);
+    box-shadow: var(--shadow);
+  }
+  .story-card {
+    display: grid;
+    grid-template-columns: 118px minmax(0, 1fr);
+    min-height: 142px;
+  }
+  .story-card img, .deal-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .story-card img { min-height: 142px; }
+  .story-copy, .deal-copy, .process-step {
+    padding: 15px;
+  }
+  .story-copy strong, .deal-copy strong, .process-step strong {
+    display: block;
+    color: var(--wine);
+    font-size: 17px;
+  }
+  .story-copy span, .deal-copy span, .process-step span {
+    display: block;
+    margin-top: 5px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .service-panel {
+    display: grid;
+    gap: 12px;
+  }
+  .chips {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding: 2px 2px 12px;
+    scrollbar-width: none;
+  }
+  .chips::-webkit-scrollbar { display: none; }
+  .chip {
+    flex: 0 0 auto;
+    min-height: 44px;
+    padding: 10px 15px;
+    border: 1px solid rgba(111, 21, 48, .20);
+    border-radius: 999px;
+    background: rgba(255, 253, 248, .90);
+    color: #4C3C40;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    scroll-snap-align: start;
+  }
+  .chip[aria-pressed="true"] {
+    color: #FFF9F1;
+    background: var(--wine);
+    box-shadow: 0 15px 28px -22px rgba(111, 21, 48, .9);
+  }
+  .inquiry-card {
+    display: grid;
+    gap: 10px;
+    padding: 16px;
+    border: 1px solid rgba(184, 138, 69, .30);
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(255, 253, 248, .96), rgba(245, 220, 224, .78));
+    box-shadow: var(--shadow);
+  }
+  #selected-message {
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .deal-card {
+    display: grid;
+    min-height: 100%;
+  }
+  .deal-photo {
+    aspect-ratio: 4 / 5;
+    background: #EDE2DA;
+  }
+  .process-step {
+    display: block;
+  }
+  .step-number {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    color: #FFF9F1;
+    background: var(--wine);
+    font-weight: 800;
+  }
+  .visit {
+    display: grid;
+    gap: 18px;
+    overflow: hidden;
+    border-radius: 24px;
+    color: #FFF9F1;
+    background: var(--wine-dark);
+    box-shadow: 0 24px 50px -34px rgba(35, 23, 26, .92);
+  }
+  .visit-photo {
+    min-height: 260px;
+    background: #2B1A20;
+  }
+  .visit-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .visit-copy {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+  }
+  .visit h2 { color: #FFF9F1; }
+  .visit p, .visit span {
+    color: rgba(255, 249, 241, .78);
+  }
+  .visit-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 4px;
+  }
+  .visit .btn-secondary {
+    color: #FFF9F1;
+    background: rgba(255, 253, 248, .10);
+    border-color: rgba(255, 253, 248, .20);
+  }
+  .footer {
+    padding: 26px 0 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 13px;
+  }
+  .sticky-cta {
+    position: fixed;
+    z-index: 20;
+    left: 12px;
+    right: 12px;
+    bottom: max(12px, env(safe-area-inset-bottom));
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid rgba(111, 21, 48, .16);
+    border-radius: 22px;
+    background: rgba(255, 253, 248, .96);
+    box-shadow: 0 18px 38px -20px rgba(35, 23, 26, .82);
+    backdrop-filter: blur(14px);
+  }
+  .sticky-copy {
+    min-width: 0;
+    padding-left: 6px;
+  }
+  .sticky-copy strong {
+    display: block;
+    color: var(--wine);
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .sticky-copy span {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  @media (max-width: 374px) {
+    .page { padding-inline: 10px; }
+    .topbar { min-height: 46px; }
+    .brand-mark { width: 36px; height: 36px; font-size: 23px; }
+    .brand-name { font-size: 12px; }
+    .brand-sub { font-size: 11px; }
+    .hero {
+      min-height: calc(100svh - 58px);
+      border-radius: 20px;
+    }
+    .hero-content {
+      gap: 8px;
+      padding: 13px;
+    }
+    .eyebrow {
+      padding: 6px 8px;
+      font-size: 10px;
+    }
+    .hero-lede { font-size: 14px; }
+    .hero-actions { gap: 8px; }
+    .hero-actions .btn {
+      min-height: 40px;
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+    .proof-item {
+      min-height: 48px;
+      padding: 7px;
+    }
+    .proof-item strong { font-size: 11px; }
+    .proof-item span { font-size: 10px; }
+    .sticky-cta .btn {
+      min-height: 40px;
+      padding-inline: 12px;
+    }
+  }
+  @media (min-width: 760px) {
+    body { padding-bottom: 0; }
+    .page { padding: 22px 28px 72px; }
+    .top-actions { display: flex; }
+    .hero {
+      min-height: 680px;
+      margin-top: 18px;
+    }
+    .hero-content {
+      gap: 16px;
+      padding: 42px;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .story-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .story-card {
+      grid-template-columns: 1fr;
+    }
+    .story-card img {
+      min-height: 230px;
+      aspect-ratio: 4 / 3;
+    }
+    .deal-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .process-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .visit {
+      grid-template-columns: minmax(0, .92fr) minmax(0, 1fr);
+      align-items: stretch;
+    }
+    .visit-photo {
+      min-height: 460px;
+    }
+    .visit-copy {
+      align-content: center;
+      padding: 34px;
+    }
+    .sticky-cta { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn, .chip { transition: none; }
+  }
+</style>
 </head>
 <body>
-  <main id="top">
-    <section class="hero" aria-labelledby="hero-title" data-hero>
-      <div class="hero__brand" aria-label="Asha brand identity">
-        <div class="brand-lockup" aria-label="Asha - A Style Hub Area">
-          <span class="brand-lockup__mark" aria-hidden="true">A</span>
-          <span class="brand-lockup__text">
-            <span class="brand-lockup__name">Asha</span>
-            <span class="brand-lockup__sub">A Style Hub Area</span>
-          </span>
-        </div>
-        <p class="since-pill">Since 1996</p>
-      </div>
-
-      <div class="hero__grid">
-        <div class="hero__copy">
-          <p class="local-proof">Jyoti Park, Sector 7 Ext., Gurugram</p>
-          <h1 id="hero-title">Custom stitching &amp; fitting in Gurugram</h1>
-          <p class="hero__lead">Asha - A Style Hub Area, formerly Asha Boutique &amp; Collections, offers women's custom stitching, blouse and saree fitting, alterations, bridal/occasion support, and ready-made ethnic wear.</p>
-          <div class="hero__actions" aria-label="Primary actions">
-            <a class="btn btn--primary" data-whatsapp-link data-testid="hero-whatsapp" href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20need%20help%20with%20custom%20stitching%20and%20fitting.%20Please%20guide%20me.">WhatsApp for Stitching</a>
-            <a class="btn btn--secondary" href="tel:+918118837701" data-testid="hero-call">Call Boutique</a>
-            <a class="directions-link" data-directions-link href="https://google.com/maps?gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MggIABBFGCcYOzIICAEQRRgnGDsyBggCEEUYOTIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIGCAYQRRhBMgYIBxBFGD3SAQg1NDU4ajBqN6gCALACAA&amp;um=1&amp;ie=UTF-8&amp;fb=1&amp;gl=in&amp;sa=X&amp;geocode=KdHEtCIqGA05MZuQie8uwJln&amp;daddr=Jyoti+Park,+Main+Rd,+near+Ashirwad+Marriage+Lawn+Banquet,+Sector+7+Ext,+Gurugram,+Haryana+122001" aria-label="Get directions to Asha Boutique &amp; Collections | Best Boutique in Gurgaon | Ethinic Wear Shop | Latkan, Button &amp; Laces Store">Get directions near Ashirwad Marriage Lawn</a>
-          </div>
-        </div>
-
-        <div class="atelier-card" aria-label="Boutique fitting visual" data-photo-slot="hero">
-          <div class="atelier-card__visual" aria-hidden="true">
-            <span class="rack-line"></span>
-            <span class="garment garment--kurta"></span>
-            <span class="garment garment--blouse"></span>
-            <span class="measure-loop"></span>
-          </div>
-          <div class="atelier-card__copy">
-            <span>WhatsApp before visiting</span>
-            <strong>Send your outfit photo, occasion date, and fitting requirement.</strong>
-          </div>
+  <div class="page">
+    <header class="topbar">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">A</div>
+        <div>
+          <div class="brand-name">Asha Style Hub</div>
+          <div class="brand-sub">formerly known as Asha Boutique and Collections</div>
         </div>
       </div>
-    </section>
+      <nav class="top-actions" aria-label="Quick actions">
+        <a class="btn btn-secondary js-directions" href="https://www.google.com/maps/search/?api=1&amp;query=Asha%20Style%20Hub%20Gurugram&amp;query_place_id=ChIJ0cS0IioYDTkRm5CJ7y7AmWc" target="_blank" rel="noopener">Open in Google Maps</a>
+        <a class="btn btn-primary js-whatsapp" href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20need%20custom%20stitching%20and%20fitting.%20I%20can%20visit%20on%20__.%20Please%20share%20today%27s%20timing." data-source="top">Book Fitting</a>
+      </nav>
+    </header>
 
-    <section class="section promise" aria-labelledby="promise-title">
-      <p class="section-kicker">Fitting first</p>
-      <h2 id="promise-title">Made to fit your body, not just your size.</h2>
-      <p class="section-copy">We focus on clean measurements, practical fitting advice, and wearable comfort for daily, festive, and occasion outfits.</p>
-      <div class="proof-strip" aria-label="Asha trust details">
-        <span>Serving Gurugram since 1996</span>
-        <span>Formerly Asha Boutique &amp; Collections</span>
-        <span>Main Road, near Ashirwad Marriage Lawn</span>
-      </div>
-    </section>
-
-    <section class="section services" aria-labelledby="services-title">
-      <p class="section-kicker">What do you need?</p>
-      <h2 id="services-title">Stitching, fitting, and ethnic wear support.</h2>
-      <div class="service-grid" role="list" aria-label="Asha services">
-        <article class="service-card is-selected" data-service-card="custom" role="listitem">
-          <div class="service-card__art service-card__art--custom" data-photo-slot="custom-stitching" aria-hidden="true"></div>
-          <div>
-            <h3>Custom Stitching</h3>
-            <p>Suits, kurtis, gowns, lehengas, ethnic dresses, and family occasion outfits.</p>
-            <button class="service-action" type="button" data-service="custom" aria-pressed="true">Select Custom Stitching</button>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <picture data-first-fold="image">
+          <source type="image/webp" srcset="/assets/launch-assets/hero-shop-480.webp 480w, /assets/launch-assets/hero-shop-760.webp 760w, /assets/launch-assets/hero-shop-1120.webp 1120w, /assets/launch-assets/hero-shop-1440.webp 1440w" sizes="(min-width: 760px) 1120px, 100vw">
+          <img class="hero-img" src="/assets/launch-assets/hero-shop-760.jpg" width="760" height="950" alt="Asha Style Hub shop interior with ethnic wear racks and folded suits" fetchpriority="high" decoding="async" data-launch-image="hero">
+        </picture>
+        <div class="hero-content">
+          <span class="eyebrow" data-first-fold="since">Serving Gurugram since 1996</span>
+          <h1 id="page-title" data-first-fold="brand">Asha Style Hub</h1>
+          <p class="hero-lede" data-first-fold="promise">
+            <strong>Women&apos;s custom stitching and fitting</strong> in Jyoti Park, with ready-made ethnic wear available in store.
+          </p>
+          <div class="hero-actions" data-first-fold="actions">
+            <a class="btn btn-primary js-whatsapp" href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20need%20custom%20stitching%20and%20fitting.%20I%20can%20visit%20on%20__.%20Please%20share%20today%27s%20timing." data-source="hero">Book Fitting on WhatsApp</a>
+            <a class="btn btn-secondary js-directions" href="https://www.google.com/maps/search/?api=1&amp;query=Asha%20Style%20Hub%20Gurugram&amp;query_place_id=ChIJ0cS0IioYDTkRm5CJ7y7AmWc" target="_blank" rel="noopener">Open in Google Maps</a>
           </div>
-        </article>
-        <article class="service-card" data-service-card="blouse-saree" role="listitem">
-          <div class="service-card__art service-card__art--blouse" data-photo-slot="blouse-saree" aria-hidden="true"></div>
-          <div>
-            <h3>Blouse &amp; Saree Fitting</h3>
-            <p>Blouse stitching, resizing, and saree-ready fitting support.</p>
-            <button class="service-action" type="button" data-service="blouse-saree" aria-pressed="false">Select Blouse &amp; Saree Fitting</button>
+          <div class="hero-proof" aria-label="Asha highlights">
+            <div class="proof-item"><strong>Fitting first</strong><span>Blouse, suit, saree</span></div>
+            <div class="proof-item"><strong>Jyoti Park</strong><span>Near Aashirwad Lawn</span></div>
+            <div class="proof-item"><strong>In-store wear</strong><span>Ask what is available</span></div>
           </div>
-        </article>
-        <article class="service-card" data-service-card="bridal" role="listitem">
-          <div class="service-card__art service-card__art--bridal" data-photo-slot="bridal-occasion" aria-hidden="true"></div>
-          <div>
-            <h3>Bridal &amp; Occasion Wear</h3>
-            <p>Wedding, engagement, festive, and party outfits with appointment-led fitting.</p>
-            <button class="service-action" type="button" data-service="bridal" aria-pressed="false">Select Bridal &amp; Occasion Wear</button>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="story-title">
+        <div class="section-head">
+          <h2 id="story-title">A real local boutique, built around fitting.</h2>
+          <p class="section-note">Customers visit Asha for measurements, blouse fitting, suit stitching, bridal and occasion fitting, alterations, and current ethnic wear options in the store.</p>
+        </div>
+        <div class="story-grid">
+          <article class="story-card">
+            <picture>
+              <source type="image/webp" srcset="/assets/launch-assets/inventory-wall-480.webp 480w, /assets/launch-assets/inventory-wall-760.webp 760w, /assets/launch-assets/inventory-wall-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 118px">
+              <img src="/assets/launch-assets/inventory-wall-760.jpg" width="760" height="950" alt="Colorful fabric and suit inventory shelves at Asha Style Hub" loading="lazy" decoding="async" data-launch-image="inventory-wall">
+            </picture>
+            <div class="story-copy"><strong>Serving since 1996</strong><span>Local customers know Asha for fit, finishing, and personal guidance.</span></div>
+          </article>
+          <article class="story-card">
+            <picture>
+              <source type="image/webp" srcset="/assets/launch-assets/ready-white-kurti-480.webp 480w, /assets/launch-assets/ready-white-kurti-760.webp 760w, /assets/launch-assets/ready-white-kurti-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 118px">
+              <img src="/assets/launch-assets/ready-white-kurti-760.jpg" width="760" height="950" alt="White embroidered ready-made kurti displayed in the Asha Style Hub store" loading="lazy" decoding="async" data-launch-image="ready-white-kurti">
+            </picture>
+            <div class="story-copy"><strong>Stitching and in-store wear</strong><span>Bring a design, fabric, or garment. Ask what is available before visiting.</span></div>
+          </article>
+          <article class="story-card">
+            <picture>
+              <source type="image/webp" srcset="/assets/launch-assets/dupatta-detail-480.webp 480w, /assets/launch-assets/dupatta-detail-760.webp 760w, /assets/launch-assets/dupatta-detail-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 118px">
+              <img src="/assets/launch-assets/dupatta-detail-760.jpg" width="760" height="950" alt="Purple dupatta embroidery detail on a hanger" loading="lazy" decoding="async" data-launch-image="dupatta-detail">
+            </picture>
+            <div class="story-copy"><strong>Detail matters</strong><span>Fitting, alteration, and finish are handled through store visits.</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="section-head">
+          <h2 id="services-title">What do you need help with?</h2>
+          <p class="section-note">Choose a service and the WhatsApp message will update before you send it.</p>
+        </div>
+        <div class="service-panel">
+          <div class="chips" role="group" aria-label="Asha services">
+            <button class="chip" type="button" data-key="custom" aria-pressed="true">Custom Stitching</button>
+            <button class="chip" type="button" data-key="blouse" aria-pressed="false">Blouse Fitting</button>
+            <button class="chip" type="button" data-key="suits" aria-pressed="false">Suit Stitching</button>
+            <button class="chip" type="button" data-key="bridal" aria-pressed="false">Bridal / Occasion</button>
+            <button class="chip" type="button" data-key="alterations" aria-pressed="false">Alterations</button>
+            <button class="chip" type="button" data-key="saree" aria-pressed="false">Saree Fitting</button>
+            <button class="chip" type="button" data-key="ready" aria-pressed="false">Ready-made Wear</button>
+            <button class="chip" type="button" data-key="coord" aria-pressed="false">Co-ord Sets</button>
+            <button class="chip" type="button" data-key="bottom" aria-pressed="false">Bottom Wear</button>
           </div>
-        </article>
-        <article class="service-card" data-service-card="alterations" role="listitem">
-          <div class="service-card__art service-card__art--alter" data-photo-slot="alterations" aria-hidden="true"></div>
-          <div>
-            <h3>Alterations</h3>
-            <p>Size correction, length adjustment, fitting changes, and repair work.</p>
-            <button class="service-action" type="button" data-service="alterations" aria-pressed="false">Select Alterations</button>
+          <div class="inquiry-card" aria-live="polite">
+            <strong id="selected-title">Custom stitching and fitting</strong>
+            <p id="selected-message">Namaste Asha, I need custom stitching and fitting. I can visit on __. Please share today&apos;s timing.</p>
+            <a class="btn btn-primary js-whatsapp" href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20need%20custom%20stitching%20and%20fitting.%20I%20can%20visit%20on%20__.%20Please%20share%20today%27s%20timing." data-source="category">Send Design on WhatsApp</a>
           </div>
-        </article>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <section class="section ready" aria-labelledby="ready-title">
-      <div class="ready__art" data-photo-slot="ready-made" aria-hidden="true">
-        <span class="folded-fabric"></span>
-        <span class="hanger-icon"></span>
-      </div>
-      <div>
-        <p class="section-kicker">Ready-made ethnic wear</p>
-        <h2 id="ready-title">Now visit for ready-made ethnic wear too.</h2>
-        <p class="section-copy">Along with stitching and alterations, Asha offers ready-made ethnic wear options for customers who want something quicker for daily wear, festive use, or gifting.</p>
-        <button class="btn btn--inline" type="button" data-service="ready">Check Ready-Made Options</button>
-      </div>
-    </section>
+      <section class="section" aria-labelledby="deal-title">
+        <div class="section-head">
+          <h2 id="deal-title">What you can ask for</h2>
+          <p class="section-note">This is not an online shop. Message first, then visit the Jyoti Park store for fitting, timing, or current in-store options.</p>
+        </div>
+        <div class="deal-grid">
+          <article class="deal-card">
+            <div class="deal-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/kurti-embroidery-480.webp 480w, /assets/launch-assets/kurti-embroidery-760.webp 760w, /assets/launch-assets/kurti-embroidery-1120.webp 1120w" sizes="(min-width: 760px) 25vw, 100vw">
+                <img src="/assets/launch-assets/kurti-embroidery-760.jpg" width="760" height="950" alt="Close detail of floral embroidery on a ready-made kurti" loading="lazy" decoding="async" data-launch-image="kurti-embroidery">
+              </picture>
+            </div>
+            <div class="deal-copy"><strong>Blouse and suit fitting</strong><span>Bring the garment or reference photo for measurement and fitting discussion.</span></div>
+          </article>
+          <article class="deal-card">
+            <div class="deal-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/inventory-wall-480.webp 480w, /assets/launch-assets/inventory-wall-760.webp 760w, /assets/launch-assets/inventory-wall-1120.webp 1120w" sizes="(min-width: 760px) 25vw, 100vw">
+                <img src="/assets/launch-assets/inventory-wall-760.jpg" width="760" height="950" alt="Colorful fabric and suit inventory shelves at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="deal-copy"><strong>Suits and ethnic wear</strong><span>Ask what is currently available in store before visiting.</span></div>
+          </article>
+          <article class="deal-card">
+            <div class="deal-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/ready-white-kurti-480.webp 480w, /assets/launch-assets/ready-white-kurti-760.webp 760w, /assets/launch-assets/ready-white-kurti-1120.webp 1120w" sizes="(min-width: 760px) 25vw, 100vw">
+                <img src="/assets/launch-assets/ready-white-kurti-760.jpg" width="760" height="950" alt="White embroidered ready-made kurti displayed in the Asha Style Hub store" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="deal-copy"><strong>Ready-made ethnic wear</strong><span>In-store options are available; WhatsApp for timing and size guidance.</span></div>
+          </article>
+          <article class="deal-card">
+            <div class="deal-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/dupatta-detail-480.webp 480w, /assets/launch-assets/dupatta-detail-760.webp 760w, /assets/launch-assets/dupatta-detail-1120.webp 1120w" sizes="(min-width: 760px) 25vw, 100vw">
+                <img src="/assets/launch-assets/dupatta-detail-760.jpg" width="760" height="950" alt="Purple dupatta embroidery detail on a hanger" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <div class="deal-copy"><strong>Alterations and finish</strong><span>Use WhatsApp to ask if your garment can be adjusted at the store.</span></div>
+          </article>
+        </div>
+      </section>
 
-    <section class="section process" aria-labelledby="process-title">
-      <p class="section-kicker">How WhatsApp helps</p>
-      <h2 id="process-title">Send details before you visit.</h2>
-      <ol class="process-list">
-        <li><span>1</span><strong>Send outfit photo or stitching requirement</strong></li>
-        <li><span>2</span><strong>Share occasion date and preferred timeline</strong></li>
-        <li><span>3</span><strong>Confirm visit timing or fitting discussion</strong></li>
-        <li><span>4</span><strong>Visit for measurement, trial, or pickup</strong></li>
-      </ol>
-      <a class="btn btn--primary process-cta" data-whatsapp-link href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20need%20help%20with%20custom%20stitching%20and%20fitting.%20Please%20guide%20me.">Start on WhatsApp</a>
-    </section>
+      <section class="section" aria-labelledby="process-title">
+        <div class="section-head">
+          <h2 id="process-title">How a visit works</h2>
+          <p class="section-note">Message first for today&apos;s timing, then visit with what the fitting team needs to see.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step"><div class="step-number">1</div><strong>Send design on WhatsApp</strong><span>Share a design, garment photo, fabric question, or fitting need.</span></div>
+          <div class="process-step"><div class="step-number">2</div><strong>Visit for measurements</strong><span>Bring fabric, reference photo, or garment for fitting discussion.</span></div>
+          <div class="process-step"><div class="step-number">3</div><strong>Trial or alteration</strong><span>The store guides the next fitting step when adjustment is needed.</span></div>
+          <div class="process-step"><div class="step-number">4</div><strong>Pickup from Jyoti Park</strong><span>Collect from Asha near Aashirwad Marriage Lawn, Sector 7 Ext.</span></div>
+        </div>
+      </section>
 
-    <section class="section visit" aria-labelledby="visit-title" data-contact-section>
-      <p class="section-kicker">Visit Asha</p>
-      <h2 id="visit-title">Visit Asha in Jyoti Park, Gurugram.</h2>
-      <p class="landmark">Located on Main Road, near Ashirwad Marriage Lawn.</p>
-      <address>
-        Asha - A Style Hub Area, Jyoti Park, Main Road, near Ashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana
-      </address>
-      <div class="contact-list" aria-label="Contact details">
-        <a href="tel:+919718213716">+91 97182 13716</a>
-        <a href="tel:+918118837701">+91 81188 37701</a>
-        <a href="https://www.instagram.com/asha.stylehub/" target="_blank" rel="noopener">@asha.stylehub</a>
-      </div>
-      <div class="visit-actions">
-        <a class="btn btn--primary" data-whatsapp-link data-testid="visit-whatsapp" href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20need%20help%20with%20custom%20stitching%20and%20fitting.%20Please%20guide%20me.">WhatsApp Before Visiting</a>
-        <a class="btn btn--secondary" href="tel:+918118837701">Call Now</a>
-        <a class="btn btn--ghost" data-directions-link href="https://google.com/maps?gs_lcrp=EgZjaHJvbWUqCAgBEEUYJxg7MggIABBFGCcYOzIICAEQRRgnGDsyBggCEEUYOTIHCAMQABiABDIHCAQQABiABDIHCAUQABiABDIGCAYQRRhBMgYIBxBFGD3SAQg1NDU4ajBqN6gCALACAA&amp;um=1&amp;ie=UTF-8&amp;fb=1&amp;gl=in&amp;sa=X&amp;geocode=KdHEtCIqGA05MZuQie8uwJln&amp;daddr=Jyoti+Park,+Main+Rd,+near+Ashirwad+Marriage+Lawn+Banquet,+Sector+7+Ext,+Gurugram,+Haryana+122001" aria-label="Get directions to Asha Boutique &amp; Collections | Best Boutique in Gurgaon | Ethinic Wear Shop | Latkan, Button &amp; Laces Store">Get Directions</a>
-        <a class="btn btn--ghost" href="https://www.instagram.com/asha.stylehub/" target="_blank" rel="noopener">View Instagram</a>
-      </div>
-    </section>
-  </main>
+      <section class="section visit" id="visit" aria-labelledby="visit-title">
+        <div class="visit-photo">
+          <picture>
+            <source type="image/webp" srcset="/assets/launch-assets/visit-interior-480.webp 480w, /assets/launch-assets/visit-interior-760.webp 760w, /assets/launch-assets/visit-interior-1120.webp 1120w, /assets/launch-assets/visit-interior-1440.webp 1440w" sizes="(min-width: 760px) 48vw, 100vw">
+            <img src="/assets/launch-assets/visit-interior-760.jpg" width="760" height="950" alt="Asha Style Hub Jyoti Park store interior with trial seating and garment displays" loading="lazy" decoding="async" data-launch-image="visit-interior">
+          </picture>
+        </div>
+        <div class="visit-copy">
+          <h2 id="visit-title">Visit Asha in Gurugram</h2>
+          <p>Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana.</p>
+          <span>WhatsApp: +91 97182 13716</span>
+          <span>Phone: +91 81188 37701</span>
+          <span>Instagram: @asha.stylehub</span>
+          <span>WhatsApp before visiting for today&apos;s timing.</span>
+          <div class="visit-actions">
+            <a class="btn btn-primary js-whatsapp" href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20want%20to%20visit%20the%20store.%20Please%20share%20today%27s%20timing%20and%20location." data-source="visit">Ask Today&apos;s Timing</a>
+            <a class="btn btn-secondary" href="tel:+919718213716">Call Before Visit</a>
+            <a class="btn btn-secondary js-directions" href="https://www.google.com/maps/search/?api=1&amp;query=Asha%20Style%20Hub%20Gurugram&amp;query_place_id=ChIJ0cS0IioYDTkRm5CJ7y7AmWc" target="_blank" rel="noopener">Open in Google Maps</a>
+            <a class="btn btn-secondary" href="https://www.instagram.com/asha.stylehub/" target="_blank" rel="noopener">View Instagram</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <div class="sticky-cta" data-testid="sticky-cta" aria-hidden="true">
-    <a class="btn btn--sticky" data-whatsapp-link data-testid="sticky-whatsapp" href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20need%20help%20with%20custom%20stitching%20and%20fitting.%20Please%20guide%20me.">WhatsApp</a>
-    <a class="btn btn--sticky-call" href="tel:+918118837701" data-testid="sticky-call">Call</a>
+    <footer class="footer">
+      Asha Style Hub, formerly known as Asha Boutique and Collections, serving Gurugram since 1996.
+    </footer>
   </div>
+
+  <div class="sticky-cta" aria-label="Sticky WhatsApp inquiry">
+    <div class="sticky-copy">
+      <strong id="sticky-title">Custom stitching and fitting</strong>
+      <span>Ask for today&apos;s timing</span>
+    </div>
+    <a class="btn btn-primary js-whatsapp" href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20need%20custom%20stitching%20and%20fitting.%20I%20can%20visit%20on%20__.%20Please%20share%20today%27s%20timing." data-source="sticky">Book Fitting</a>
+  </div>
+
+<script>
+  const PHONE = '919718213716';
+  const inquiries = {
+    custom: {
+      title: 'Custom stitching and fitting',
+      sticky: "Ask for today's timing",
+      message: "Namaste Asha, I need custom stitching and fitting. I can visit on __. Please share today's timing."
+    },
+    blouse: {
+      title: 'Blouse fitting',
+      sticky: 'Ask about blouse fitting',
+      message: "Namaste Asha, I need blouse stitching/fitting. I can visit on __. Please share today's timing."
+    },
+    suits: {
+      title: 'Suit stitching',
+      sticky: 'Ask about suit stitching',
+      message: "Namaste Asha, I need suit stitching and fitting. I can visit on __. Please share today's timing."
+    },
+    bridal: {
+      title: 'Bridal and occasion fitting',
+      sticky: 'Ask about occasion fitting',
+      message: "Namaste Asha, I need bridal/occasion outfit stitching or fitting. I can visit on __. Please share today's timing."
+    },
+    alterations: {
+      title: 'Alteration and fitting support',
+      sticky: 'Ask about alterations',
+      message: "Namaste Asha, I need alteration/fitting support. I can visit on __. Please share today's timing."
+    },
+    saree: {
+      title: 'Saree fitting support',
+      sticky: 'Ask about saree fitting',
+      message: "Namaste Asha, I need saree fitting and blouse support. I can visit on __. Please share today's timing."
+    },
+    ready: {
+      title: 'Ready-made ethnic wear',
+      sticky: 'Ask what is available',
+      message: "Namaste Asha, I want to ask what ready-made ethnic wear is available in store. Please share today's timing."
+    },
+    coord: {
+      title: 'Co-ord sets',
+      sticky: 'Ask about co-ord sets',
+      message: "Namaste Asha, I want to ask about co-ord sets available in store. Please share today's timing."
+    },
+    bottom: {
+      title: 'Bottom wear',
+      sticky: 'Ask about bottom wear',
+      message: "Namaste Asha, I want to ask about bottom wear available in store. Please share today's timing."
+    },
+    visit: {
+      title: 'Visit the store',
+      sticky: "Ask for today's timing",
+      message: "Namaste Asha, I want to visit the store. Please share today's timing and location."
+    }
+  };
+
+  let selectedKey = 'custom';
+  const selectedTitle = document.getElementById('selected-title');
+  const selectedMessage = document.getElementById('selected-message');
+  const stickyTitle = document.getElementById('sticky-title');
+  const stickySubtitle = document.querySelector('.sticky-copy span');
+  const whatsAppLinks = Array.from(document.querySelectorAll('.js-whatsapp'));
+  const chips = Array.from(document.querySelectorAll('.chip'));
+
+  function linkFor(message) {
+    return `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
+  }
+
+  function applyInquiry(key) {
+    selectedKey = inquiries[key] ? key : 'custom';
+    const inquiry = inquiries[selectedKey];
+    selectedTitle.textContent = inquiry.title;
+    selectedMessage.textContent = inquiry.message;
+    stickyTitle.textContent = inquiry.title;
+    stickySubtitle.textContent = inquiry.sticky;
+    for (const chip of chips) {
+      chip.setAttribute('aria-pressed', String(chip.dataset.key === selectedKey));
+    }
+    for (const link of whatsAppLinks) {
+      const source = link.dataset.source;
+      const message = source === 'visit' ? inquiries.visit.message : inquiry.message;
+      link.href = linkFor(message);
+    }
+  }
+
+  for (const chip of chips) {
+    chip.addEventListener('click', () => applyInquiry(chip.dataset.key));
+  }
+  applyInquiry(selectedKey);
+</script>
 </body>
 </html>
