@@ -244,12 +244,38 @@
     line-height: 1.18;
   }
   .section {
-    padding: 28px 0 0;
+    padding: 30px 0 0;
+  }
+  .section + .section:not(.visit) {
+    margin-top: 30px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  .section.visit {
+    margin-top: 34px;
   }
   .section-head {
     display: grid;
     gap: 8px;
-    margin-bottom: 14px;
+    margin-bottom: 16px;
+  }
+  .kicker {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+  }
+  .kicker::before {
+    content: "";
+    width: 24px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--gold);
   }
   h2 {
     color: var(--wine-dark);
@@ -302,31 +328,40 @@
     display: grid;
     gap: 12px;
   }
+  /* --- service picker: 2-col tappable grid (revertable: restore .chips/.chip block) --- */
   .chips {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    padding: 2px 2px 12px;
-    scrollbar-width: none;
+    padding: 2px 0;
   }
-  .chips::-webkit-scrollbar { display: none; }
   .chip {
-    flex: 0 0 auto;
-    min-height: 44px;
-    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 56px;
+    padding: 12px 14px;
     border: 1px solid rgba(111, 21, 48, .20);
-    border-radius: 999px;
+    border-radius: 16px;
     background: rgba(255, 253, 248, .90);
     color: #4C3C40;
     font: inherit;
+    font-size: 14px;
     font-weight: 800;
+    line-height: 1.18;
+    text-align: left;
     cursor: pointer;
-    scroll-snap-align: start;
+  }
+  .chip::before {
+    content: attr(data-icon);
+    flex: 0 0 auto;
+    font-size: 19px;
+    line-height: 1;
   }
   .chip[aria-pressed="true"] {
     color: #FFF9F1;
     background: var(--wine);
+    border-color: var(--wine);
     box-shadow: 0 15px 28px -22px rgba(111, 21, 48, .9);
   }
   .inquiry-card {
@@ -507,6 +542,9 @@
       min-height: 230px;
       aspect-ratio: 4 / 3;
     }
+    .chips {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
     .deal-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
@@ -574,6 +612,7 @@
 
       <section class="section" aria-labelledby="story-title">
         <div class="section-head">
+          <span class="kicker">Our boutique</span>
           <h2 id="story-title">A real local boutique, built around fitting.</h2>
           <p class="section-note">Customers visit Asha for measurements, blouse fitting, suit stitching, bridal and occasion fitting, alterations, and current ethnic wear options in the store.</p>
         </div>
@@ -604,20 +643,21 @@
 
       <section class="section" id="services" aria-labelledby="services-title">
         <div class="section-head">
+          <span class="kicker">Get started</span>
           <h2 id="services-title">What do you need help with?</h2>
           <p class="section-note">Choose a service and the WhatsApp message will update before you send it.</p>
         </div>
         <div class="service-panel">
           <div class="chips" role="group" aria-label="Asha services">
-            <button class="chip" type="button" data-key="custom" aria-pressed="true">Custom Stitching</button>
-            <button class="chip" type="button" data-key="blouse" aria-pressed="false">Blouse Fitting</button>
-            <button class="chip" type="button" data-key="suits" aria-pressed="false">Suit Stitching</button>
-            <button class="chip" type="button" data-key="bridal" aria-pressed="false">Bridal / Occasion</button>
-            <button class="chip" type="button" data-key="alterations" aria-pressed="false">Alterations</button>
-            <button class="chip" type="button" data-key="saree" aria-pressed="false">Saree Fitting</button>
-            <button class="chip" type="button" data-key="ready" aria-pressed="false">Ready-made Wear</button>
-            <button class="chip" type="button" data-key="coord" aria-pressed="false">Co-ord Sets</button>
-            <button class="chip" type="button" data-key="bottom" aria-pressed="false">Bottom Wear</button>
+            <button class="chip" type="button" data-key="custom" data-icon="&#9986;&#65039;" aria-pressed="true">Custom Stitching</button>
+            <button class="chip" type="button" data-key="blouse" data-icon="&#128090;" aria-pressed="false">Blouse Fitting</button>
+            <button class="chip" type="button" data-key="suits" data-icon="&#129525;" aria-pressed="false">Suit Stitching</button>
+            <button class="chip" type="button" data-key="bridal" data-icon="&#128141;" aria-pressed="false">Bridal / Occasion</button>
+            <button class="chip" type="button" data-key="alterations" data-icon="&#128208;" aria-pressed="false">Alterations</button>
+            <button class="chip" type="button" data-key="saree" data-icon="&#129915;" aria-pressed="false">Saree Fitting</button>
+            <button class="chip" type="button" data-key="ready" data-icon="&#128717;&#65039;" aria-pressed="false">Ready-made Wear</button>
+            <button class="chip" type="button" data-key="coord" data-icon="&#128087;" aria-pressed="false">Co-ord Sets</button>
+            <button class="chip" type="button" data-key="bottom" data-icon="&#128086;" aria-pressed="false">Bottom Wear</button>
           </div>
           <div class="inquiry-card" aria-live="polite">
             <strong id="selected-title">Custom stitching and fitting</strong>
@@ -629,6 +669,7 @@
 
       <section class="section" aria-labelledby="deal-title">
         <div class="section-head">
+          <span class="kicker">What we do</span>
           <h2 id="deal-title">What you can ask for</h2>
           <p class="section-note">This is not an online shop. Message first, then visit the Jyoti Park store for fitting, timing, or current in-store options.</p>
         </div>
@@ -674,6 +715,7 @@
 
       <section class="section" aria-labelledby="process-title">
         <div class="section-head">
+          <span class="kicker">How it works</span>
           <h2 id="process-title">How a visit works</h2>
           <p class="section-note">Message first for today&apos;s timing, then visit with what the fitting team needs to see.</p>
         </div>
@@ -693,6 +735,7 @@
           </picture>
         </div>
         <div class="visit-copy">
+          <span class="kicker">Find us</span>
           <h2 id="visit-title">Visit Asha in Gurugram</h2>
           <p>Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana.</p>
           <span>WhatsApp: +91 97182 13716</span>
