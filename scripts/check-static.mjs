@@ -54,17 +54,24 @@ for (const ref of imageRefs) {
 }
 
 // ── No marketing claims the owner did not approve ───────────────────────────
+// Note: the blanket review/rated block is intentionally gone — the page now shows a real,
+// owner-verified Google rating (asserted positively below). Fabricated star claims and
+// every other unapproved claim stay blocked.
 const forbidden = [
   /Grand Launch/i,
   /22 June/i,
   /No\.\s*1/i,
   /\bcart\b|\bcheckout\b|\bpayment\b/i,
-  /5\s*star|five\s*star|\breviews?\b|\brated\b/i,
+  /5\s*star|five\s*star/i,
   /future photos?|future collections?|placeholder|lookbook ready/i,
   /perfect fit guaranteed/i,
 ];
 for (const pattern of forbidden) {
   assert.doesNotMatch(html, pattern);
 }
+
+// ── Approved, owner-verified Google rating (attributed text; no self-serving schema) ──
+assert.match(html, /Rated 4\.7 on Google/, "must show the approved Google rating value");
+assert.match(html, /156\s*reviews/, "must cite the approved Google review count");
 
 console.log("Asha static checks passed");

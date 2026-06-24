@@ -528,6 +528,31 @@
     color: var(--muted);
     font-size: 14px;
   }
+  .rating-pill {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 11px;
+    border: 1px solid rgba(255, 249, 241, .30);
+    border-radius: 999px;
+    background: rgba(27, 23, 24, .42);
+    backdrop-filter: blur(10px);
+    color: #FFF9F1;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+  .rating-pill .stars { color: #F7C948; letter-spacing: 1px; }
+  .visit .visit-rating {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #FFF9F1;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .visit .visit-rating .stars { color: #F7C948; letter-spacing: 1px; }
   .visit-map {
     margin-top: 6px;
     border: 1px solid rgba(255, 253, 248, .20);
@@ -698,6 +723,7 @@
         </picture>
         <div class="hero-content">
           <span class="eyebrow" data-first-fold="since">Serving Gurugram since 1996</span>
+          <span class="rating-pill" data-first-fold="rating"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</span>
           <h1 id="page-title" data-first-fold="brand">Asha Style Hub</h1>
           <p class="hero-lede" data-first-fold="promise">
             <strong>Women&apos;s custom stitching and fitting</strong> in Jyoti Park, with ready-made ethnic wear available in store.
@@ -883,6 +909,7 @@
         <div class="visit-copy">
           <span class="kicker">Find us</span>
           <h2 id="visit-title">Visit Asha in Gurugram</h2>
+          <p class="visit-rating"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</p>
           <p>Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana.</p>
           <span>Hours: Mon&ndash;Sat 10am&ndash;9pm &middot; Sunday 4:30&ndash;8pm</span>
           <span>WhatsApp: +91 97182 13716</span>
