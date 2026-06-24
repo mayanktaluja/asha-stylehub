@@ -528,6 +528,36 @@
     color: var(--muted);
     font-size: 14px;
   }
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .work-card {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 253, 248, .86);
+    box-shadow: var(--shadow);
+  }
+  .work-photo {
+    aspect-ratio: 4 / 5;
+    background: #EDE2DA;
+  }
+  .work-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .work-card span {
+    display: block;
+    padding: 10px 12px 12px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
   .rating-pill {
     width: fit-content;
     display: inline-flex;
@@ -674,6 +704,9 @@
     .chips {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+    .work-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
     .deal-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
@@ -767,6 +800,70 @@
               <img src="/assets/launch-assets/dupatta-detail-760.jpg" width="760" height="950" alt="Purple dupatta embroidery detail on a hanger" loading="lazy" decoding="async" data-launch-image="dupatta-detail">
             </picture>
             <div class="story-copy"><strong>Detail matters</strong><span>Hand-finished fitting and alterations, done in store.</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="work-title">
+        <div class="section-head">
+          <span class="kicker">Our work</span>
+          <h2 id="work-title">Recently stitched at Asha</h2>
+          <p class="section-note">A few pieces stitched and finished in store. Bring a design or fabric and we tailor it to your fit.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-maroon-kurti-480.webp 480w, /assets/launch-assets/work-maroon-kurti-760.webp 760w, /assets/launch-assets/work-maroon-kurti-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-maroon-kurti-760.jpg" width="760" height="1013" alt="Maroon kurti with gold bird-and-floral motifs stitched at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Maroon kurti, gold bird-and-floral motifs</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-bridal-blouse-480.webp 480w, /assets/launch-assets/work-bridal-blouse-760.webp 760w, /assets/launch-assets/work-bridal-blouse-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-bridal-blouse-760.jpg" width="760" height="1013" alt="Red bridal blouse with zari border and embroidery stitched at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Bridal blouse, zari border and embroidery</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-organza-saree-480.webp 480w, /assets/launch-assets/work-organza-saree-760.webp 760w, /assets/launch-assets/work-organza-saree-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-organza-saree-760.jpg" width="760" height="1013" alt="Mauve organza saree with embroidered floral border at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Organza saree, embroidered floral border</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-peach-saree-480.webp 480w, /assets/launch-assets/work-peach-saree-760.webp 760w, /assets/launch-assets/work-peach-saree-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-peach-saree-760.jpg" width="760" height="1013" alt="Peach organza saree with silver floral embroidery at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Peach organza saree, silverwork border</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-paisley-kurti-480.webp 480w, /assets/launch-assets/work-paisley-kurti-760.webp 760w, /assets/launch-assets/work-paisley-kurti-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-paisley-kurti-760.jpg" width="760" height="1013" alt="Pink paisley-print kurti with embroidered yoke at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Printed kurti, embroidered yoke</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-embroidered-kurti-480.webp 480w, /assets/launch-assets/work-embroidered-kurti-760.webp 760w, /assets/launch-assets/work-embroidered-kurti-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-embroidered-kurti-760.jpg" width="760" height="1013" alt="Cream kurti with pink floral thread embroidery at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Cream kurti, floral thread embroidery</span>
           </article>
         </div>
       </section>
