@@ -31,6 +31,18 @@ assert.equal(schema.alternateName, "Asha Boutique and Collections");
 assert.equal(schema.address.addressLocality, "Gurugram");
 assert.deepEqual(schema.sameAs, ["https://www.instagram.com/asha.stylehub/"]);
 
+// ── FAQ: every JSON-LD block parses, and an FAQPage backs the visible FAQ ────
+const ldBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map(
+  (m) => JSON.parse(m[1])
+);
+const faq = ldBlocks.find((b) => b["@type"] === "FAQPage");
+assert.ok(faq, "index.html should include FAQPage JSON-LD");
+assert.ok(
+  Array.isArray(faq.mainEntity) && faq.mainEntity.length >= 6,
+  "FAQPage should list the visitor questions"
+);
+assert.match(html, /<details class="faq-item">/, "FAQ should render as no-JS details items");
+
 // ── Self-contained page: no external CSS/JS bundle, only local images ────────
 assert.doesNotMatch(html, /\/assets\/asha\//, "landing should be self-contained (no legacy asha.css/asha.js)");
 const imageRefs = [...new Set(html.match(/\/assets\/launch-assets\/[^"'\s,)]+/g) || [])];
@@ -42,17 +54,24 @@ for (const ref of imageRefs) {
 }
 
 // ── No marketing claims the owner did not approve ───────────────────────────
+// Note: the blanket review/rated block is intentionally gone — the page now shows a real,
+// owner-verified Google rating (asserted positively below). Fabricated star claims and
+// every other unapproved claim stay blocked.
 const forbidden = [
   /Grand Launch/i,
   /22 June/i,
   /No\.\s*1/i,
   /\bcart\b|\bcheckout\b|\bpayment\b/i,
-  /5\s*star|five\s*star|\breviews?\b|\brated\b/i,
+  /5\s*star|five\s*star/i,
   /future photos?|future collections?|placeholder|lookbook ready/i,
   /perfect fit guaranteed/i,
 ];
 for (const pattern of forbidden) {
   assert.doesNotMatch(html, pattern);
 }
+
+// ── Approved, owner-verified Google rating (attributed text; no self-serving schema) ──
+assert.match(html, /Rated 4\.7 on Google/, "must show the approved Google rating value");
+assert.match(html, /156\s*reviews/, "must cite the approved Google review count");
 
 console.log("Asha static checks passed");

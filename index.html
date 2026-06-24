@@ -34,6 +34,54 @@
   "sameAs": ["https://www.instagram.com/asha.stylehub/"]
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need an appointment, or can I walk in?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Message us on WhatsApp for the day's timing, then walk in. A quick message means we are ready when you arrive." }
+    },
+    {
+      "@type": "Question",
+      "name": "How are measurements taken?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In person at the store, so the fit is right for you. Bring a garment that already fits you well as a reference if you can." }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I bring for custom stitching?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Your fabric or a design photo, plus a reference garment if you have one. We guide you on the rest in store." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you stitch from fabric I already have?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Bring your own fabric, or choose from the range available in store." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you alter garments bought elsewhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes — bring the garment and we adjust the fit and finish it cleanly." }
+    },
+    {
+      "@type": "Question",
+      "name": "How long will my order take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on the garment and the season. We confirm an exact ready-date when you drop your fabric at the store." }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Cost depends on the garment, fabric, and work involved. Message us on WhatsApp or ask in store and we share a clear quote." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are you, and how do I reach the store?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana. Tap Open in Google Maps for directions." }
+    }
+  ]
+}
+</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; }
   :root {
@@ -437,6 +485,117 @@
     background: rgba(255, 253, 248, .10);
     border-color: rgba(255, 253, 248, .20);
   }
+  .faq-list {
+    display: grid;
+    gap: 10px;
+  }
+  .faq-item {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 253, 248, .86);
+    box-shadow: var(--shadow);
+  }
+  .faq-item summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 52px;
+    padding: 14px 16px;
+    color: var(--wine);
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 1.25;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    flex: 0 0 auto;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--gold);
+  }
+  .faq-item[open] summary::after { content: "\2212"; }
+  .faq-item summary:focus-visible {
+    outline: 3px solid rgba(184, 138, 69, .62);
+    outline-offset: -3px;
+  }
+  .faq-answer {
+    padding: 0 16px 16px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .work-card {
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    background: rgba(255, 253, 248, .86);
+    box-shadow: var(--shadow);
+  }
+  .work-photo {
+    aspect-ratio: 4 / 5;
+    background: #EDE2DA;
+  }
+  .work-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .work-card span {
+    display: block;
+    padding: 10px 12px 12px;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .rating-pill {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 11px;
+    border: 1px solid rgba(255, 249, 241, .30);
+    border-radius: 999px;
+    background: rgba(27, 23, 24, .42);
+    backdrop-filter: blur(10px);
+    color: #FFF9F1;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.15;
+  }
+  .rating-pill .stars { color: #F7C948; letter-spacing: 1px; }
+  .visit .visit-rating {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #FFF9F1;
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .visit .visit-rating .stars { color: #F7C948; letter-spacing: 1px; }
+  .visit-map {
+    margin-top: 6px;
+    border: 1px solid rgba(255, 253, 248, .20);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #2B1A20;
+  }
+  .visit-map iframe {
+    display: block;
+    width: 100%;
+    height: 200px;
+    border: 0;
+  }
   .footer {
     padding: 26px 0 0;
     color: var(--muted);
@@ -545,6 +704,9 @@
     .chips {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+    .work-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
     .deal-grid {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
@@ -594,6 +756,7 @@
         </picture>
         <div class="hero-content">
           <span class="eyebrow" data-first-fold="since">Serving Gurugram since 1996</span>
+          <span class="rating-pill" data-first-fold="rating"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</span>
           <h1 id="page-title" data-first-fold="brand">Asha Style Hub</h1>
           <p class="hero-lede" data-first-fold="promise">
             <strong>Women&apos;s custom stitching and fitting</strong> in Jyoti Park, with ready-made ethnic wear available in store.
@@ -605,7 +768,7 @@
           <div class="hero-proof" aria-label="Asha highlights">
             <div class="proof-item"><strong>Fitting first</strong><span>Blouse, suit, saree</span></div>
             <div class="proof-item"><strong>Jyoti Park</strong><span>Near Aashirwad Lawn</span></div>
-            <div class="proof-item"><strong>In-store wear</strong><span>Ask what is available</span></div>
+            <div class="proof-item"><strong>Open daily</strong><span>Mon&ndash;Sat 10&ndash;9 &middot; Sun 4:30&ndash;8</span></div>
           </div>
         </div>
       </section>
@@ -629,14 +792,78 @@
               <source type="image/webp" srcset="/assets/launch-assets/ready-white-kurti-480.webp 480w, /assets/launch-assets/ready-white-kurti-760.webp 760w, /assets/launch-assets/ready-white-kurti-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 118px">
               <img src="/assets/launch-assets/ready-white-kurti-760.jpg" width="760" height="950" alt="White embroidered ready-made kurti displayed in the Asha Style Hub store" loading="lazy" decoding="async" data-launch-image="ready-white-kurti">
             </picture>
-            <div class="story-copy"><strong>Stitching and in-store wear</strong><span>Bring a design, fabric, or garment. Ask what is available before visiting.</span></div>
+            <div class="story-copy"><strong>Stitching and in-store wear</strong><span>Bring a design, fabric, or garment — we stitch it to your measurements.</span></div>
           </article>
           <article class="story-card">
             <picture>
               <source type="image/webp" srcset="/assets/launch-assets/dupatta-detail-480.webp 480w, /assets/launch-assets/dupatta-detail-760.webp 760w, /assets/launch-assets/dupatta-detail-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 118px">
               <img src="/assets/launch-assets/dupatta-detail-760.jpg" width="760" height="950" alt="Purple dupatta embroidery detail on a hanger" loading="lazy" decoding="async" data-launch-image="dupatta-detail">
             </picture>
-            <div class="story-copy"><strong>Detail matters</strong><span>Fitting, alteration, and finish are handled through store visits.</span></div>
+            <div class="story-copy"><strong>Detail matters</strong><span>Hand-finished fitting and alterations, done in store.</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="work-title">
+        <div class="section-head">
+          <span class="kicker">Our work</span>
+          <h2 id="work-title">Recently stitched at Asha</h2>
+          <p class="section-note">A few pieces stitched and finished in store. Bring a design or fabric and we tailor it to your fit.</p>
+        </div>
+        <div class="work-grid">
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-maroon-kurti-480.webp 480w, /assets/launch-assets/work-maroon-kurti-760.webp 760w, /assets/launch-assets/work-maroon-kurti-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-maroon-kurti-760.jpg" width="760" height="1013" alt="Maroon kurti with gold bird-and-floral motifs stitched at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Maroon kurti, gold bird-and-floral motifs</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-bridal-blouse-480.webp 480w, /assets/launch-assets/work-bridal-blouse-760.webp 760w, /assets/launch-assets/work-bridal-blouse-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-bridal-blouse-760.jpg" width="760" height="1013" alt="Red bridal blouse with zari border and embroidery stitched at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Bridal blouse, zari border and embroidery</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-organza-saree-480.webp 480w, /assets/launch-assets/work-organza-saree-760.webp 760w, /assets/launch-assets/work-organza-saree-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-organza-saree-760.jpg" width="760" height="1013" alt="Mauve organza saree with embroidered floral border at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Organza saree, embroidered floral border</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-peach-saree-480.webp 480w, /assets/launch-assets/work-peach-saree-760.webp 760w, /assets/launch-assets/work-peach-saree-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-peach-saree-760.jpg" width="760" height="1013" alt="Peach organza saree with silver floral embroidery at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Peach organza saree, silverwork border</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-paisley-kurti-480.webp 480w, /assets/launch-assets/work-paisley-kurti-760.webp 760w, /assets/launch-assets/work-paisley-kurti-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-paisley-kurti-760.jpg" width="760" height="1013" alt="Pink paisley-print kurti with embroidered yoke at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Printed kurti, embroidered yoke</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-embroidered-kurti-480.webp 480w, /assets/launch-assets/work-embroidered-kurti-760.webp 760w, /assets/launch-assets/work-embroidered-kurti-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-embroidered-kurti-760.jpg" width="760" height="1013" alt="Cream kurti with pink floral thread embroidery at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Cream kurti, floral thread embroidery</span>
           </article>
         </div>
       </section>
@@ -671,7 +898,7 @@
         <div class="section-head">
           <span class="kicker">What we do</span>
           <h2 id="deal-title">What you can ask for</h2>
-          <p class="section-note">This is not an online shop. Message first, then visit the Jyoti Park store for fitting, timing, or current in-store options.</p>
+          <p class="section-note">Not an online shop — message us on WhatsApp, then visit the Jyoti Park store for fitting, stitching, and the current range.</p>
         </div>
         <div class="deal-grid">
           <article class="deal-card">
@@ -690,7 +917,7 @@
                 <img src="/assets/launch-assets/inventory-wall-760.jpg" width="760" height="950" alt="Colorful fabric and suit inventory shelves at Asha Style Hub" loading="lazy" decoding="async">
               </picture>
             </div>
-            <div class="deal-copy"><strong>Suits and ethnic wear</strong><span>Ask what is currently available in store before visiting.</span></div>
+            <div class="deal-copy"><strong>Suits and ethnic wear</strong><span>Browse the current range in store and pick your fabric.</span></div>
           </article>
           <article class="deal-card">
             <div class="deal-photo">
@@ -699,7 +926,7 @@
                 <img src="/assets/launch-assets/ready-white-kurti-760.jpg" width="760" height="950" alt="White embroidered ready-made kurti displayed in the Asha Style Hub store" loading="lazy" decoding="async">
               </picture>
             </div>
-            <div class="deal-copy"><strong>Ready-made ethnic wear</strong><span>In-store options are available; WhatsApp for timing and size guidance.</span></div>
+            <div class="deal-copy"><strong>Ready-made ethnic wear</strong><span>Ready pieces to try on, plus stitching to fit you exactly.</span></div>
           </article>
           <article class="deal-card">
             <div class="deal-photo">
@@ -708,7 +935,7 @@
                 <img src="/assets/launch-assets/dupatta-detail-760.jpg" width="760" height="950" alt="Purple dupatta embroidery detail on a hanger" loading="lazy" decoding="async">
               </picture>
             </div>
-            <div class="deal-copy"><strong>Alterations and finish</strong><span>Use WhatsApp to ask if your garment can be adjusted at the store.</span></div>
+            <div class="deal-copy"><strong>Alterations and finish</strong><span>Bring any garment — we adjust the fit and finish it cleanly.</span></div>
           </article>
         </div>
       </section>
@@ -727,26 +954,72 @@
         </div>
       </section>
 
+      <section class="section faq" aria-labelledby="faq-title">
+        <div class="section-head">
+          <span class="kicker">Good to know</span>
+          <h2 id="faq-title">Questions before you visit</h2>
+          <p class="section-note">Quick answers to what customers ask most. Anything else, message us on WhatsApp.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Do I need an appointment, or can I walk in?</summary>
+            <div class="faq-answer">Message us on WhatsApp for the day&apos;s timing, then walk in. A quick message means we are ready when you arrive.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How are measurements taken?</summary>
+            <div class="faq-answer">In person at the store, so the fit is right for you. Bring a garment that already fits you well as a reference if you can.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What should I bring for custom stitching?</summary>
+            <div class="faq-answer">Your fabric or a design photo, plus a reference garment if you have one. We guide you on the rest in store.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Can you stitch from fabric I already have?</summary>
+            <div class="faq-answer">Yes. Bring your own fabric, or choose from the range available in store.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you alter garments bought elsewhere?</summary>
+            <div class="faq-answer">Yes — bring the garment and we adjust the fit and finish it cleanly.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How long will my order take?</summary>
+            <div class="faq-answer">It depends on the garment and the season. We confirm an exact ready-date when you drop your fabric at the store.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How much does it cost?</summary>
+            <div class="faq-answer">Cost depends on the garment, fabric, and work involved. Message us on WhatsApp or ask in store and we share a clear quote.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Where are you, and how do I reach the store?</summary>
+            <div class="faq-answer">Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana. Tap &ldquo;Open in Google Maps&rdquo; below for directions.</div>
+          </details>
+        </div>
+      </section>
+
       <section class="section visit" id="visit" aria-labelledby="visit-title">
         <div class="visit-photo">
           <picture>
-            <source type="image/webp" srcset="/assets/launch-assets/visit-interior-480.webp 480w, /assets/launch-assets/visit-interior-760.webp 760w, /assets/launch-assets/visit-interior-1120.webp 1120w, /assets/launch-assets/visit-interior-1440.webp 1440w" sizes="(min-width: 760px) 48vw, 100vw">
-            <img src="/assets/launch-assets/visit-interior-760.jpg" width="760" height="950" alt="Asha Style Hub Jyoti Park store interior with trial seating and garment displays" loading="lazy" decoding="async" data-launch-image="visit-interior">
+            <source type="image/webp" srcset="/assets/launch-assets/storefront-front-480.webp 480w, /assets/launch-assets/storefront-front-760.webp 760w, /assets/launch-assets/storefront-front-1120.webp 1120w, /assets/launch-assets/storefront-front-1440.webp 1440w" sizes="(min-width: 760px) 48vw, 100vw">
+            <img src="/assets/launch-assets/storefront-front-760.jpg" width="760" height="570" alt="Asha Style Hub storefront on Main Road, Jyoti Park, Sector 7 Ext., Gurugram" loading="lazy" decoding="async" data-launch-image="storefront-front">
           </picture>
         </div>
         <div class="visit-copy">
           <span class="kicker">Find us</span>
           <h2 id="visit-title">Visit Asha in Gurugram</h2>
+          <p class="visit-rating"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</p>
           <p>Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana.</p>
+          <span>Hours: Mon&ndash;Sat 10am&ndash;9pm &middot; Sunday 4:30&ndash;8pm</span>
           <span>WhatsApp: +91 97182 13716</span>
           <span>Phone: +91 81188 37701</span>
           <span>Instagram: @asha.stylehub</span>
-          <span>WhatsApp before visiting for today&apos;s timing.</span>
           <div class="visit-actions">
             <a class="btn btn-primary js-whatsapp" href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20want%20to%20visit%20the%20store.%20Please%20share%20today%27s%20timing%20and%20location." data-source="visit">Ask Today&apos;s Timing</a>
             <a class="btn btn-secondary" href="tel:+919718213716">Call Before Visit</a>
             <a class="btn btn-secondary js-directions" href="https://www.google.com/maps/search/?api=1&amp;query=Asha%20Style%20Hub%20Gurugram&amp;query_place_id=ChIJ0cS0IioYDTkRm5CJ7y7AmWc" target="_blank" rel="noopener">Open in Google Maps</a>
             <a class="btn btn-secondary" href="https://www.instagram.com/asha.stylehub/" target="_blank" rel="noopener">View Instagram</a>
+          </div>
+          <div class="visit-map">
+            <iframe title="Map to Asha Style Hub, Jyoti Park, Sector 7 Ext., Gurugram" src="https://maps.google.com/maps?q=Asha%20Style%20Hub%2C%20Jyoti%20Park%2C%20Main%20Road%2C%20Sector%207%20Ext.%2C%20Gurugram%2C%20Haryana&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </section>
