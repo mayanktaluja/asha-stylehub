@@ -23,6 +23,7 @@
   "alternateName": "Asha Boutique and Collections",
   "url": "https://asha-stylehub.vercel.app/",
   "telephone": "+919718213716",
+  "priceRange": "₹100–₹1600",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext.",
@@ -528,6 +529,51 @@
     color: var(--muted);
     font-size: 14px;
   }
+  .price-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .price-card {
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(255, 253, 248, .86);
+    box-shadow: var(--shadow);
+  }
+  .price-card > strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--wine);
+    font-size: 17px;
+  }
+  .price-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .price-card li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 9px 0;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .price-card li:first-of-type { border-top: 0; }
+  .price-card li b {
+    flex: 0 0 auto;
+    color: var(--ink);
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+  }
+  .price-note {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 13px;
+  }
   .work-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -705,6 +751,9 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .work-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .price-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
     .deal-grid {
@@ -938,6 +987,42 @@
             <div class="deal-copy"><strong>Alterations and finish</strong><span>Bring any garment — we adjust the fit and finish it cleanly.</span></div>
           </article>
         </div>
+      </section>
+
+      <section class="section" aria-labelledby="price-title">
+        <div class="section-head">
+          <span class="kicker">Stitching charges</span>
+          <h2 id="price-title">Simple, honest pricing</h2>
+          <p class="section-note">Starting prices for our most common work. The final price depends on the design and detailing — we always confirm before we begin.</p>
+        </div>
+        <div class="price-grid">
+          <div class="price-card">
+            <strong>Suit stitching</strong>
+            <ul>
+              <li><span>Simple suit salwar</span><b>&#8377;650</b></li>
+              <li><span>Without astar (lining)</span><b>&#8377;750</b></li>
+              <li><span>Shirt astar</span><b>&#8377;1,250</b></li>
+              <li><span>Full astar</span><b>&#8377;1,600</b></li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <strong>Blouse stitching</strong>
+            <ul>
+              <li><span>Without astar (lining)</span><b>&#8377;400</b></li>
+              <li><span>Without padding</span><b>&#8377;750</b></li>
+              <li><span>Padded</span><b>&#8377;1,500</b></li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <strong>Saree &amp; alterations</strong>
+            <ul>
+              <li><span>Ready-to-wear saree</span><b>&#8377;500</b></li>
+              <li><span>Saree with fall &amp; pico</span><b>&#8377;650</b></li>
+              <li><span>Alterations, from</span><b>&#8377;100</b></li>
+            </ul>
+          </div>
+        </div>
+        <p class="price-note">Additional charges may apply as per design. Message on WhatsApp for an exact quote for your outfit.</p>
       </section>
 
       <section class="section" aria-labelledby="process-title">
