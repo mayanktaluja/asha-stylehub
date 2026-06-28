@@ -135,15 +135,16 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    display: grid;
-    place-items: center;
+    overflow: hidden;
     flex: 0 0 auto;
-    color: #FFF9F1;
-    background: var(--wine);
     border: 1px solid rgba(184, 138, 69, .55);
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 27px;
-    font-weight: 700;
+    background: var(--ivory);
+  }
+  .brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   .brand-name {
     font-size: 14px;
@@ -604,12 +605,48 @@
     font-weight: 600;
     line-height: 1.3;
   }
+  .owner-band {
+    display: grid;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: rgba(255, 253, 248, .86);
+    box-shadow: var(--shadow);
+  }
+  .owner-photo {
+    aspect-ratio: 1 / 1;
+    background: #EDE2DA;
+  }
+  .owner-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+    display: block;
+  }
+  .owner-copy {
+    display: grid;
+    gap: 8px;
+    align-content: center;
+    padding: 18px;
+  }
+  .owner-copy strong {
+    color: var(--wine);
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 22px;
+    line-height: 1.1;
+  }
+  .owner-copy span {
+    color: var(--muted);
+    font-size: 14px;
+  }
   .rating-pill {
     width: fit-content;
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 6px 11px;
+    min-height: 40px;
+    padding: 8px 13px;
     border: 1px solid rgba(255, 249, 241, .30);
     border-radius: 999px;
     background: rgba(27, 23, 24, .42);
@@ -618,15 +655,21 @@
     font-size: 12px;
     font-weight: 700;
     line-height: 1.15;
+    text-decoration: none;
   }
   .rating-pill .stars { color: #F7C948; letter-spacing: 1px; }
+  .rating-pill:hover, .visit .visit-rating:hover { opacity: .86; }
   .visit .visit-rating {
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: 7px;
+    min-height: 40px;
+    padding: 4px 0;
     color: #FFF9F1;
     font-size: 15px;
     font-weight: 700;
+    text-decoration: none;
   }
   .visit .visit-rating .stars { color: #F7C948; letter-spacing: 1px; }
   .visit-map {
@@ -688,7 +731,7 @@
   @media (max-width: 374px) {
     .page { padding-inline: 10px; }
     .topbar { min-height: 46px; }
-    .brand-mark { width: 36px; height: 36px; font-size: 23px; }
+    .brand-mark { width: 36px; height: 36px; }
     .brand-name { font-size: 12px; }
     .brand-sub { font-size: 11px; }
     .hero {
@@ -753,6 +796,17 @@
     .work-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
+    .owner-band {
+      grid-template-columns: minmax(0, .85fr) minmax(0, 1fr);
+      align-items: stretch;
+    }
+    .owner-photo {
+      aspect-ratio: auto;
+      min-height: 380px;
+    }
+    .owner-copy {
+      padding: 32px;
+    }
     .price-grid {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -785,7 +839,12 @@
   <div class="page">
     <header class="topbar">
       <div class="brand-lockup">
-        <div class="brand-mark" aria-hidden="true">A</div>
+        <div class="brand-mark">
+          <picture>
+            <source type="image/webp" srcset="/assets/launch-assets/logo-badge-96.webp 96w, /assets/launch-assets/logo-badge-192.webp 192w" sizes="42px">
+            <img src="/assets/launch-assets/logo-badge-192.png" width="42" height="42" alt="" decoding="async">
+          </picture>
+        </div>
         <div>
           <div class="brand-name">Asha Style Hub</div>
           <div class="brand-sub">formerly known as Asha Boutique and Collections</div>
@@ -805,7 +864,7 @@
         </picture>
         <div class="hero-content">
           <span class="eyebrow" data-first-fold="since">Serving Gurugram since 1996</span>
-          <span class="rating-pill" data-first-fold="rating"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</span>
+          <a class="rating-pill" data-first-fold="rating" href="https://search.google.com/local/reviews?placeid=ChIJ0cS0IioYDTkRm5CJ7y7AmWc" target="_blank" rel="noopener" aria-label="Read our 156 reviews on Google"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</a>
           <h1 id="page-title" data-first-fold="brand">Asha Style Hub</h1>
           <p class="hero-lede" data-first-fold="promise">
             <strong>Women&apos;s custom stitching and fitting</strong> in Jyoti Park, with ready-made ethnic wear available in store.
@@ -914,6 +973,40 @@
             </div>
             <span>Cream kurti, floral thread embroidery</span>
           </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-redsuit-neckline-480.webp 480w, /assets/launch-assets/work-redsuit-neckline-760.webp 760w, /assets/launch-assets/work-redsuit-neckline-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-redsuit-neckline-760.jpg" width="760" height="1013" alt="Happy customer wearing a red embroidered suit with floral neckline, stitched at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Red embroidered suit, worn by our customer</span>
+          </article>
+          <article class="work-card">
+            <div class="work-photo">
+              <picture>
+                <source type="image/webp" srcset="/assets/launch-assets/work-redsuit-front-480.webp 480w, /assets/launch-assets/work-redsuit-front-760.webp 760w, /assets/launch-assets/work-redsuit-front-1120.webp 1120w" sizes="(min-width: 760px) 33vw, 50vw">
+                <img src="/assets/launch-assets/work-redsuit-front-760.jpg" width="760" height="1013" alt="Customer in a full red suit with embroidered neckline and hem border, stitched at Asha Style Hub" loading="lazy" decoding="async">
+              </picture>
+            </div>
+            <span>Red suit with floral hem, fitted to the customer</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="owner-title">
+        <div class="owner-band">
+          <div class="owner-photo">
+            <picture>
+              <source type="image/webp" srcset="/assets/launch-assets/owner-measuring-480.webp 480w, /assets/launch-assets/owner-measuring-760.webp 760w, /assets/launch-assets/owner-measuring-1120.webp 1120w" sizes="(min-width: 760px) 45vw, 100vw">
+              <img src="/assets/launch-assets/owner-measuring-760.jpg" width="760" height="1013" alt="Asha Style Hub owner measuring a customer in store" loading="lazy" decoding="async">
+            </picture>
+          </div>
+          <div class="owner-copy">
+            <span class="kicker">Why the fit is right</span>
+            <strong id="owner-title">Measured in person, every time</strong>
+            <span>Every order starts with your measurements taken by hand in the store — that is why the fit comes out right. A family-run boutique serving Gurugram since 1996.</span>
+          </div>
         </div>
       </section>
 
@@ -1091,7 +1184,7 @@
         <div class="visit-copy">
           <span class="kicker">Find us</span>
           <h2 id="visit-title">Visit Asha in Gurugram</h2>
-          <p class="visit-rating"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</p>
+          <a class="visit-rating" href="https://search.google.com/local/reviews?placeid=ChIJ0cS0IioYDTkRm5CJ7y7AmWc" target="_blank" rel="noopener" aria-label="Read our 156 reviews on Google"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</a>
           <p>Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana.</p>
           <span>Hours: Mon&ndash;Sat 10am&ndash;9pm &middot; Sunday 4:30&ndash;8pm</span>
           <span>WhatsApp: +91 97182 13716</span>
