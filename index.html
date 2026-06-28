@@ -135,15 +135,16 @@
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    display: grid;
-    place-items: center;
+    overflow: hidden;
     flex: 0 0 auto;
-    color: #FFF9F1;
-    background: var(--wine);
     border: 1px solid rgba(184, 138, 69, .55);
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 27px;
-    font-weight: 700;
+    background: var(--ivory);
+  }
+  .brand-mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
   .brand-name {
     font-size: 14px;
@@ -609,7 +610,8 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    padding: 6px 11px;
+    min-height: 40px;
+    padding: 8px 13px;
     border: 1px solid rgba(255, 249, 241, .30);
     border-radius: 999px;
     background: rgba(27, 23, 24, .42);
@@ -618,15 +620,21 @@
     font-size: 12px;
     font-weight: 700;
     line-height: 1.15;
+    text-decoration: none;
   }
   .rating-pill .stars { color: #F7C948; letter-spacing: 1px; }
+  .rating-pill:hover, .visit .visit-rating:hover { opacity: .86; }
   .visit .visit-rating {
+    width: fit-content;
     display: flex;
     align-items: center;
     gap: 7px;
+    min-height: 40px;
+    padding: 4px 0;
     color: #FFF9F1;
     font-size: 15px;
     font-weight: 700;
+    text-decoration: none;
   }
   .visit .visit-rating .stars { color: #F7C948; letter-spacing: 1px; }
   .visit-map {
@@ -688,7 +696,7 @@
   @media (max-width: 374px) {
     .page { padding-inline: 10px; }
     .topbar { min-height: 46px; }
-    .brand-mark { width: 36px; height: 36px; font-size: 23px; }
+    .brand-mark { width: 36px; height: 36px; }
     .brand-name { font-size: 12px; }
     .brand-sub { font-size: 11px; }
     .hero {
@@ -785,7 +793,12 @@
   <div class="page">
     <header class="topbar">
       <div class="brand-lockup">
-        <div class="brand-mark" aria-hidden="true">A</div>
+        <div class="brand-mark">
+          <picture>
+            <source type="image/webp" srcset="/assets/launch-assets/logo-badge-96.webp 96w, /assets/launch-assets/logo-badge-192.webp 192w" sizes="42px">
+            <img src="/assets/launch-assets/logo-badge-192.png" width="42" height="42" alt="" decoding="async">
+          </picture>
+        </div>
         <div>
           <div class="brand-name">Asha Style Hub</div>
           <div class="brand-sub">formerly known as Asha Boutique and Collections</div>
@@ -805,7 +818,7 @@
         </picture>
         <div class="hero-content">
           <span class="eyebrow" data-first-fold="since">Serving Gurugram since 1996</span>
-          <span class="rating-pill" data-first-fold="rating"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</span>
+          <a class="rating-pill" data-first-fold="rating" href="https://search.google.com/local/reviews?placeid=ChIJ0cS0IioYDTkRm5CJ7y7AmWc" target="_blank" rel="noopener" aria-label="Read our 156 reviews on Google"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</a>
           <h1 id="page-title" data-first-fold="brand">Asha Style Hub</h1>
           <p class="hero-lede" data-first-fold="promise">
             <strong>Women&apos;s custom stitching and fitting</strong> in Jyoti Park, with ready-made ethnic wear available in store.
@@ -1091,7 +1104,7 @@
         <div class="visit-copy">
           <span class="kicker">Find us</span>
           <h2 id="visit-title">Visit Asha in Gurugram</h2>
-          <p class="visit-rating"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</p>
+          <a class="visit-rating" href="https://search.google.com/local/reviews?placeid=ChIJ0cS0IioYDTkRm5CJ7y7AmWc" target="_blank" rel="noopener" aria-label="Read our 156 reviews on Google"><span class="stars" aria-hidden="true">&#9733;</span>Rated 4.7 on Google &middot; 156 reviews</a>
           <p>Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana.</p>
           <span>Hours: Mon&ndash;Sat 10am&ndash;9pm &middot; Sunday 4:30&ndash;8pm</span>
           <span>WhatsApp: +91 97182 13716</span>
