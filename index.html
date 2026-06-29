@@ -11,10 +11,24 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_IN">
 <meta property="og:url" content="https://asha-stylehub.vercel.app/">
+<meta property="og:site_name" content="Asha Style Hub">
+<meta property="og:image" content="https://asha-stylehub.vercel.app/assets/launch-assets/storefront-front-1120.jpg">
+<meta property="og:image:width" content="1120">
+<meta property="og:image:height" content="840">
+<meta property="og:image:alt" content="Asha Style Hub storefront on Main Road, Jyoti Park, Sector 7 Ext., Gurugram">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Asha Style Hub">
+<meta name="twitter:description" content="Serving Gurugram since 1996 for women's custom stitching, fitting, alterations, and in-store ethnic wear.">
+<meta name="twitter:image" content="https://asha-stylehub.vercel.app/assets/launch-assets/storefront-front-1120.jpg">
 <link rel="canonical" href="https://asha-stylehub.vercel.app/">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/launch-assets/logo-badge-192.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/launch-assets/logo-badge-96.png">
+<link rel="apple-touch-icon" href="/assets/launch-assets/logo-badge-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"></noscript>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -32,6 +46,13 @@
     "addressCountry": "IN"
   },
   "areaServed": ["Jyoti Park", "Sector 7 Ext.", "Gurugram"],
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "16:30", "closes": "20:00" }
+  ],
+  "image": "https://asha-stylehub.vercel.app/assets/launch-assets/storefront-front-1120.jpg",
+  "logo": "https://asha-stylehub.vercel.app/assets/launch-assets/logo-badge-192.png",
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Asha%20Style%20Hub%20Gurugram&query_place_id=ChIJ0cS0IioYDTkRm5CJ7y7AmWc",
   "sameAs": ["https://www.instagram.com/asha.stylehub/"]
 }
 </script>
@@ -239,7 +260,7 @@
     padding: 7px 10px;
     border: 1px solid rgba(255, 249, 241, .34);
     border-radius: 999px;
-    background: rgba(27, 23, 24, .42);
+    background: rgba(27, 23, 24, .62);
     color: #F7E1B8;
     font-size: 11px;
     font-weight: 800;
@@ -262,7 +283,7 @@
   .hero-lede strong { color: #FFFFFF; }
   .hero-actions {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 10px;
     max-width: 520px;
   }
@@ -277,7 +298,7 @@
     padding: 9px;
     border: 1px solid rgba(255, 249, 241, .22);
     border-radius: 14px;
-    background: rgba(255, 253, 248, .12);
+    background: rgba(27, 23, 24, .45);
     backdrop-filter: blur(12px);
   }
   .proof-item strong {
@@ -314,7 +335,7 @@
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    color: var(--gold);
+    color: #8A6326;
     font-size: 11px;
     font-weight: 800;
     letter-spacing: .15em;
@@ -473,6 +494,7 @@
     padding: 20px;
   }
   .visit h2 { color: #FFF9F1; }
+  .visit .kicker { color: var(--gold); }
   .visit p, .visit span {
     color: rgba(255, 249, 241, .78);
   }
@@ -588,7 +610,7 @@
     box-shadow: var(--shadow);
   }
   .work-photo {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 4;
     background: #EDE2DA;
   }
   .work-photo img {
@@ -630,7 +652,8 @@
     align-content: center;
     padding: 18px;
   }
-  .owner-copy strong {
+  .owner-copy .owner-title {
+    margin: 0;
     color: var(--wine);
     font-family: "Playfair Display", Georgia, serif;
     font-size: 22px;
@@ -649,7 +672,7 @@
     padding: 8px 13px;
     border: 1px solid rgba(255, 249, 241, .30);
     border-radius: 999px;
-    background: rgba(27, 23, 24, .42);
+    background: rgba(27, 23, 24, .62);
     backdrop-filter: blur(10px);
     color: #FFF9F1;
     font-size: 12px;
@@ -1004,7 +1027,7 @@
           </div>
           <div class="owner-copy">
             <span class="kicker">Why the fit is right</span>
-            <strong id="owner-title">Measured in person, every time</strong>
+            <h2 id="owner-title" class="owner-title">Measured in person, every time</h2>
             <span>Every order starts with your measurements taken by hand in the store — that is why the fit comes out right. A family-run boutique serving Gurugram since 1996.</span>
           </div>
         </div>
@@ -1023,7 +1046,7 @@
             <button class="chip" type="button" data-key="suits" data-icon="&#129525;" aria-pressed="false">Suit Stitching</button>
             <button class="chip" type="button" data-key="bridal" data-icon="&#128141;" aria-pressed="false">Bridal / Occasion</button>
             <button class="chip" type="button" data-key="alterations" data-icon="&#128208;" aria-pressed="false">Alterations</button>
-            <button class="chip" type="button" data-key="saree" data-icon="&#129915;" aria-pressed="false">Saree Fitting</button>
+            <button class="chip" type="button" data-key="saree" data-icon="&#129403;" aria-pressed="false">Saree Fitting</button>
             <button class="chip" type="button" data-key="ready" data-icon="&#128717;&#65039;" aria-pressed="false">Ready-made Wear</button>
             <button class="chip" type="button" data-key="coord" data-icon="&#128087;" aria-pressed="false">Co-ord Sets</button>
             <button class="chip" type="button" data-key="bottom" data-icon="&#128086;" aria-pressed="false">Bottom Wear</button>
@@ -1188,7 +1211,7 @@
           <p>Jyoti Park, Main Road, near Aashirwad Marriage Lawn, Sector 7 Ext., Gurugram, Haryana.</p>
           <span>Hours: Mon&ndash;Sat 10am&ndash;9pm &middot; Sunday 4:30&ndash;8pm</span>
           <span>WhatsApp: +91 97182 13716</span>
-          <span>Phone: +91 81188 37701</span>
+          <span>Phone: <a href="tel:+918118837701">+91 81188 37701</a></span>
           <span>Instagram: @asha.stylehub</span>
           <div class="visit-actions">
             <a class="btn btn-primary js-whatsapp" href="https://wa.me/919718213716?text=Namaste%20Asha%2C%20I%20want%20to%20visit%20the%20store.%20Please%20share%20today%27s%20timing%20and%20location." data-source="visit">Ask Today&apos;s Timing</a>
